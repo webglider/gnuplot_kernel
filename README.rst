@@ -45,6 +45,12 @@ Requires
 - `Notebook`_ (IPython/Jupyter Notebook)
 - `Metakernel`_
 
+EPS terminal support requires ImageMagick and Wand:
+
+.. code-block:: bash
+   brew install imagemagick
+   pip install Wand
+
 
 Documentation
 =============

@@ -9,6 +9,7 @@ from metakernel.process_metakernel import TextOutput
 
 from .replwrap import GnuplotREPLWrapper, PROMPT
 from .exceptions import GnuplotError
+from .epswrapper import EPS
 
 # This is the only place that the version is
 # specified
@@ -232,6 +233,8 @@ class GnuplotKernel(ProcessMetaKernel):
         if self.inline_plotting:
             if settings['format'] == 'svg':
                 _Image = SVG
+            elif settings['format'] == 'eps':
+                _Image = EPS
             else:
                 _Image = Image
 

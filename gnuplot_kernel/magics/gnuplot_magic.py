@@ -48,13 +48,14 @@ class GnuplotMagic(Magic):
         inline_terminals = {'pngcairo': 'png',
                             'png': 'png',
                             'jpeg': 'jpg',
-                            'svg': 'svg'}
+                            'svg': 'svg',
+                            'postscript': 'eps'}
         format = inline_terminals.get(terminal, 'png')
 
         if backend == 'inline':
             if terminal not in inline_terminals:
                 msg = ("For inline plots, the terminal must be "
-                       "one of pngcairo, jpeg, svg or png")
+                       "one of pngcairo, jpeg, svg, png or postscript")
                 raise ValueError(msg)
 
         self.kernel.plot_settings['backend'] = backend
