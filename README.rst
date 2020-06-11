@@ -48,6 +48,7 @@ Requires
 EPS terminal support requires ImageMagick and Wand:
 
 .. code-block:: bash
+
    brew install imagemagick
    pip install Wand
 
